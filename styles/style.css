@@ -1,0 +1,126 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap");
+
+/* Mobile First approach */
+
+/* -------------------------------------------- */
+/* Booting Up */
+* {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --darkblue: #011826;
+  --orange: #ff9a16;
+  --bluegreen: #2cc1aa;
+  --red: #e7174a;
+  --lightgrey: #f7fff2;
+  --black: #000000;
+  --white: #ffffff;
+  --opensans: Open Sans;
+  --raleway: Raleway, sans-serif;
+}
+
+body {
+  background-color: var(--darkblue);
+  color: var(--lightgrey);
+  font-family: var(--opensans);
+}
+
+header,
+main,
+footer {
+  padding: 10px;
+}
+
+/* -------------------------------------------- */
+/* Utilities */
+
+.container-1440 {
+  max-width: 1440px;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+/* -------------------------------------------- */
+/* Reusable Items */
+
+.red-button {
+}
+
+.dark-blue-button {
+}
+
+/* -------------------------------------------- */
+/* Page Accueil */
+
+#index-page-header {
+  display: flex;
+  justify-content: space-between;
+
+  .header-text-nav {
+    display: none;
+  }
+
+  .header-hamburger-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-box {
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 180px;
+    }
+  }
+}
+
+#index-page-main {
+  padding: 10px;
+
+  #dwwm-section {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+
+    article {
+      position: relative;
+
+      p {
+        margin: 16px 0;
+      }
+
+      #open-contact-modal {
+        background-color: var(--orange);
+        color: var(--lightgrey);
+        cursor: pointer;
+        outline: none;
+        padding: 10px;
+        margin: 10px 0;
+        text-decoration: none;
+      }
+    }
+
+    .image-box {
+      margin: 50px 0;
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 50%;
+      }
+    }
+  }
+}
+
+/* -------------------------------------------- */
+/* Page Ma Formation */
+
+/* -------------------------------------------- */
+/* Page Mes Projets */

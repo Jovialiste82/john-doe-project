@@ -1,0 +1,36 @@
+/* 
+  - Mobile First Approach selected
+  - Format mobile : 320px et jusqu'à 767px
+  - Format tablette : 768px et jusqu'à 1024px
+  - Format ordinateur (desktop) : 1025 et +
+*/
+
+/* -------------------------------------------- */
+/* Page Accueil */
+
+/* Format tablette */
+@media screen and (min-width: 768px) {
+}
+/* Format Desktop */
+@media screen and (min-width: 1024px) {
+}
+
+/* -------------------------------------------- */
+/* Page Ma Formation */
+
+/* Format tablette */
+@media screen and (min-width: 768px) {
+}
+/* Format Desktop */
+@media screen and (min-width: 1024px) {
+}
+
+/* -------------------------------------------- */
+/* Page Mes Projets */
+
+/* Format tablette */
+@media screen and (min-width: 768px) {
+}
+/* Format Desktop */
+@media screen and (min-width: 1024px) {
+}
