@@ -102,6 +102,59 @@
 }
 /* Format Desktop */
 @media screen and (min-width: 1024px) {
+  #index-page-header,
+  #dwwm-section,
+  #my-skills-section,
+  #my-projects-section {
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  /* Hero Section */
+  #index-page-main > #dwwm-section {
+    flex-direction: row;
+  }
+
+  #index-page-main > #dwwm-section > .presentation-box {
+    width: 55%;
+    margin: 0 80px;
+  }
+  #index-page-main > #dwwm-section > img {
+    margin: auto;
+  }
+
+  /* Section Formation */
+  #index-page-main
+    #my-formation-section
+    > .my-formation-container
+    > .grouping-1
+    > img,
+  #index-page-main
+    #my-formation-section
+    > .my-formation-container
+    > .grouping-2
+    > img {
+    height: 80vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+  }
+
+  #index-page-main
+    #my-formation-section
+    > .my-formation-container
+    > .grouping-1
+    > .text-box,
+  #index-page-main
+    #my-formation-section
+    > .my-formation-container
+    > .grouping-2
+    > .text-box {
+    width: 40%;
+    height: 40vh;
+    position: absolute;
+    top: 20vh;
+  }
 }
 
 /* -------------------------------------------- */
