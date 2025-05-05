@@ -32,7 +32,14 @@ body {
 header,
 main,
 footer {
-  padding: 10px;
+  padding: 16px;
+}
+
+h1,
+h2 {
+  font-family: var(--raleway);
+  font-weight: 700;
+  font-size: 27px;
 }
 
 /* -------------------------------------------- */
@@ -42,8 +49,26 @@ footer {
   max-width: 1440px;
 }
 
+.container-1140 {
+  max-width: 1140px;
+}
+
 .margin-auto {
   margin: auto;
+}
+
+.mb-24px {
+  margin-bottom: 24px;
+}
+
+.positioning-1 {
+  position: absolute;
+  bottom: -30px;
+  right: 20%;
+}
+
+.text-align-center {
+  text-align: center;
 }
 
 /* -------------------------------------------- */
@@ -53,6 +78,18 @@ footer {
 }
 
 .dark-blue-button {
+  border: 1px solid var(--lightgrey);
+  padding: 16px;
+  display: block;
+  width: fit-content;
+  background-color: var(--darkblue);
+  color: var(--white);
+  text-decoration: none;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: var(--red);
+  }
 }
 
 /* -------------------------------------------- */
@@ -62,21 +99,26 @@ footer {
   display: flex;
   justify-content: space-between;
 
-  .header-text-nav {
-    display: none;
-  }
-
-  .header-hamburger-nav {
+  .header-nav {
     display: flex;
     align-items: center;
+
+    ul {
+      display: none;
+    }
   }
 
   .logo-box {
     display: flex;
     flex-direction: column;
+    text-decoration: none;
 
     img {
       width: 180px;
+    }
+
+    span {
+      color: var(--lightgrey);
     }
   }
 }
@@ -84,10 +126,11 @@ footer {
 #index-page-main {
   padding: 10px;
 
+  /* Section presentation */
   #dwwm-section {
     display: flex;
     flex-direction: column;
-    margin: 50px 0;
+    margin-top: 10vh;
 
     article {
       position: relative;
@@ -107,16 +150,140 @@ footer {
       }
     }
 
-    .image-box {
-      margin: 50px 0;
-      display: flex;
-      justify-content: center;
+    img {
+      margin: 50px auto;
+      width: 90%;
+    }
+  }
 
-      img {
-        width: 50%;
+  /* Section Formation */
+  #my-formation-section {
+    margin-top: 10vh;
+
+    .my-formation-container {
+      display: flex;
+      flex-direction: column;
+      gap: 160px;
+
+      .grouping {
+        display: flex;
+        flex-direction: column;
+
+        img {
+          margin: auto;
+          width: 60%;
+        }
+
+        .text-box {
+          background-color: var(--orange);
+          padding: 40px 24px;
+          position: relative;
+
+          p {
+            margin-top: 16px;
+          }
+        }
       }
     }
   }
+
+  /* Section Compétences */
+  #my-skills-section {
+    margin-top: 10vh;
+
+    .my-skills-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .my-skills-group {
+        details {
+          margin: 16px;
+        }
+
+        details {
+          summary {
+            padding: 16px;
+            background-color: var(--lightgrey);
+            color: var(--orange);
+            list-style: none;
+
+            p {
+              padding: 8px;
+              border-bottom: 2px solid var(--red);
+            }
+          }
+
+          ul {
+            background-color: var(--lightgrey);
+            color: var(--black);
+            padding: 16px 40px;
+
+            li {
+              list-style-type: circle;
+              margin: 8px;
+            }
+          }
+        }
+
+        .frameworks > ul > li > ul > li {
+          list-style-type: square;
+        }
+
+        /* details:open > summary {
+          background-color: #ccf;
+        } */
+      }
+    }
+  }
+
+  /* Section Projets */
+  #my-projects-section {
+    margin-top: 10vh;
+
+    .title-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 24px 0;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+
+      article {
+        border: 1px solid var(--lightgrey);
+        padding: 16px;
+        position: relative;
+
+        span {
+          position: absolute;
+          top: 36px;
+          left: 30px;
+          padding: 8px;
+          background-color: var(--darkblue);
+          color: var(--white);
+        }
+
+        img {
+          width: 100%;
+          margin: 16px auto;
+        }
+
+        p {
+          margin: 16px auto;
+        }
+      }
+    }
+  }
+}
+
+#index-page-footer {
+  background-color: var(--bluegreen);
+  text-align: center;
+  margin-top: 50px;
 }
 
 /* -------------------------------------------- */
