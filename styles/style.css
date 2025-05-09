@@ -365,12 +365,25 @@ h2 {
   - Format ordinateur (desktop) : 1025 et +
 */
 
+/* ///////////////////////////////////// */
 /* Format tablette */
 @media screen and (min-width: 768px) {
   /* Header */
   /* Section: John Doe - DWWM */
   /* Section: Ma Formation */
   /* Section: Mes Competences */
+  #index-page-main #my-skills-section > .my-skills-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #index-page-main
+    #my-skills-section
+    > .my-skills-container
+    > .my-skills-group {
+    width: 100%;
+  }
   /* Section: Mes Projets */
   #index-page-main #my-projects-section #projects-grid {
     display: none;
@@ -436,23 +449,31 @@ h2 {
   /* Footer */
 }
 
+/* ///////////////////////////////////// */
 /* Format Desktop */
 @media screen and (min-width: 1024px) {
   /* Header */
   /* Section: John Doe - DWWM */
   /* Section: Ma Formation */
   /* Section: Mes Competences */
+  #index-page-main #my-skills-section {
+    max-width: 1440px;
+    margin: auto auto 80px auto;
+  }
   /* Section: Mes Projets */
-  #projects-grid-section {
+  #index-page-main #my-projects-section #projects-grid-section {
     max-width: 1440px;
     margin: auto;
   }
 
-  #projects-grid-alt {
+  #index-page-main #my-projects-section #projects-grid-alt {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  #projects-grid-alt > :nth-last-of-type(1) {
+  #index-page-main
+    #my-projects-section
+    #projects-grid-alt
+    > :nth-last-of-type(1) {
     grid-column: span 1;
   }
   /* Footer */
