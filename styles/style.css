@@ -61,6 +61,14 @@ h2 {
   margin-bottom: 24px;
 }
 
+.mb-80px {
+  margin-bottom: 80px;
+}
+
+.ml-40px {
+  margin-left: 40px;
+}
+
 .positioning-1 {
   position: absolute;
   bottom: -30px;
@@ -69,6 +77,14 @@ h2 {
 
 .text-align-center {
   text-align: center;
+}
+
+.text-align-start {
+  text-align: start;
+}
+
+.block {
+  display: block;
 }
 
 /* -------------------------------------------- */
@@ -86,208 +102,358 @@ h2 {
   color: var(--white);
   text-decoration: none;
   transition: background-color 0.3s;
-
-  &:hover {
-    background-color: var(--red);
-  }
 }
 
-/* -------------------------------------------- */
-/* Page Accueil */
+.dark-blue-button:hover {
+  background-color: var(--red);
+}
+
+.open-contact-modal {
+  background-color: var(--orange);
+  color: var(--lightgrey);
+  cursor: pointer;
+  outline: none;
+  padding: 10px;
+  margin: 10px 0;
+  text-decoration: none;
+}
+
+.red-hero {
+  height: 430px;
+  background-color: var(--red);
+  display: grid;
+  align-items: center;
+  text-align: center;
+}
+
+/* ///////////////////////////////////// */
+/* /////// HEADER ////////////////////// */
+/* ///////////////////////////////////// */
 
 #index-page-header {
   display: flex;
   justify-content: space-between;
-
-  .header-nav {
-    display: flex;
-    align-items: center;
-
-    ul {
-      display: none;
-    }
-  }
-
-  .logo-box {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-
-    img {
-      width: 180px;
-    }
-
-    span {
-      color: var(--lightgrey);
-    }
-  }
 }
+
+#index-page-header .header-nav {
+  display: flex;
+  align-items: center;
+}
+
+#index-page-header .header-nav ul {
+  display: none;
+}
+
+#index-page-header .logo-box {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+#index-page-header .logo-box img {
+  width: 180px;
+}
+#index-page-header .logo-box span {
+  color: var(--lightgrey);
+}
+
+/* ///////////////////////////////////// */
+/* /////// MAIN //////////////////////// */
+/* ///////////////////////////////////// */
 
 #index-page-main {
   padding: 10px;
-
-  /* Section presentation */
-  #dwwm-section {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10vh;
-
-    article {
-      position: relative;
-
-      p {
-        margin: 16px 0;
-      }
-
-      #open-contact-modal {
-        background-color: var(--orange);
-        color: var(--lightgrey);
-        cursor: pointer;
-        outline: none;
-        padding: 10px;
-        margin: 10px 0;
-        text-decoration: none;
-      }
-    }
-
-    img {
-      margin: 50px auto;
-      width: 90%;
-    }
-  }
-
-  /* Section Formation */
-  #my-formation-section {
-    margin-top: 10vh;
-
-    .my-formation-container {
-      display: flex;
-      flex-direction: column;
-      gap: 160px;
-
-      .grouping {
-        display: flex;
-        flex-direction: column;
-
-        img {
-          margin: auto;
-          width: 60%;
-        }
-
-        .text-box {
-          background-color: var(--orange);
-          padding: 40px 24px;
-          position: relative;
-
-          p {
-            margin-top: 16px;
-          }
-        }
-      }
-    }
-  }
-
-  /* Section Compétences */
-  #my-skills-section {
-    margin-top: 10vh;
-
-    .my-skills-container {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-
-      .my-skills-group {
-        details {
-          margin: 16px;
-        }
-
-        details {
-          summary {
-            padding: 16px;
-            background-color: var(--lightgrey);
-            color: var(--orange);
-            list-style: none;
-
-            p {
-              padding: 8px;
-              border-bottom: 2px solid var(--red);
-            }
-          }
-
-          ul {
-            background-color: var(--lightgrey);
-            color: var(--black);
-            padding: 16px 40px;
-
-            li {
-              list-style-type: circle;
-              margin: 8px;
-            }
-          }
-        }
-
-        .frameworks > ul > li > ul > li {
-          list-style-type: square;
-        }
-
-        /* details:open > summary {
-          background-color: #ccf;
-        } */
-      }
-    }
-  }
-
-  /* Section Projets */
-  #my-projects-section {
-    margin-top: 10vh;
-
-    .title-box {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 24px 0;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-
-      article {
-        border: 1px solid var(--lightgrey);
-        padding: 16px;
-        position: relative;
-
-        span {
-          position: absolute;
-          top: 36px;
-          left: 30px;
-          padding: 8px;
-          background-color: var(--darkblue);
-          color: var(--white);
-        }
-
-        img {
-          width: 100%;
-          margin: 16px auto;
-        }
-
-        p {
-          margin: 16px auto;
-        }
-      }
-    }
-  }
 }
 
+#index-page-main #dwwm-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+}
+
+#index-page-main #dwwm-section article {
+  position: relative;
+}
+
+#index-page-main #dwwm-section article p {
+  margin: 16px 0;
+}
+
+#index-page-main #dwwm-section img {
+  margin: 50px auto;
+  width: 90%;
+}
+
+#index-page-main #my-formation-section {
+  margin-top: 10vh;
+}
+
+#index-page-main #my-formation-section .my-formation-container {
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
+}
+
+#index-page-main #my-formation-section .my-formation-container .grouping {
+  display: flex;
+  flex-direction: column;
+}
+
+#index-page-main #my-formation-section .my-formation-container .grouping img {
+  margin: auto;
+  width: 60%;
+}
+
+#index-page-main
+  #my-formation-section
+  .my-formation-container
+  .grouping
+  .text-box {
+  background-color: var(--orange);
+  padding: 40px 24px;
+  position: relative;
+}
+
+#index-page-main
+  #my-formation-section
+  .my-formation-container
+  .grouping
+  .text-box
+  p {
+  margin-top: 16px;
+}
+
+#index-page-main #my-skills-section {
+  margin-top: 10vh;
+}
+
+#index-page-main #my-skills-section .my-skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#index-page-main
+  #my-skills-section
+  .my-skills-container
+  .my-skills-group
+  details {
+  margin: 16px;
+}
+
+#index-page-main
+  #my-skills-section
+  .my-skills-container
+  .my-skills-group
+  details
+  summary {
+  padding: 16px;
+  background-color: var(--lightgrey);
+  color: var(--orange);
+  list-style: none;
+}
+
+#index-page-main
+  #my-skills-section
+  .my-skills-container
+  .my-skills-group
+  details
+  summary
+  p {
+  padding: 8px;
+  border-bottom: 2px solid var(--red);
+}
+
+#index-page-main
+  #my-skills-section
+  .my-skills-container
+  .my-skills-group
+  details
+  ul {
+  background-color: var(--lightgrey);
+  color: var(--black);
+  padding: 16px 40px;
+}
+
+#index-page-main
+  #my-skills-section
+  .my-skills-container
+  .my-skills-group
+  details
+  ul
+  li {
+  list-style-type: circle;
+  margin: 8px;
+}
+
+#index-page-main
+  #my-skills-section
+  .my-skills-container
+  .my-skills-group
+  details
+  .frameworks
+  > ul
+  > li
+  > ul
+  > li {
+  list-style-type: square;
+}
+
+#index-page-main #my-projects-section {
+  margin-top: 10vh;
+}
+
+#index-page-main #my-projects-section .title-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 24px 0;
+}
+
+#index-page-main #my-projects-section #projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+#index-page-main #my-projects-section #projects-grid article {
+  border: 1px solid var(--lightgrey);
+  padding: 16px;
+  position: relative;
+}
+
+#index-page-main #my-projects-section #projects-grid article span {
+  position: absolute;
+  top: 36px;
+  left: 30px;
+  padding: 8px;
+  background-color: var(--darkblue);
+  color: var(--white);
+}
+
+#index-page-main #my-projects-section #projects-grid article img {
+  width: 100%;
+  margin: 16px auto;
+}
+
+#index-page-main #my-projects-section #projects-grid article p {
+  margin: 16px auto;
+}
+
+#index-page-main #my-projects-section #projects-grid-alt {
+  display: none;
+}
+
+/* ///////////////////////////////////// */
+/* /////// FOOTER ////////////////////// */
+/* ///////////////////////////////////// */
 #index-page-footer {
   background-color: var(--bluegreen);
   text-align: center;
   margin-top: 50px;
 }
 
-/* -------------------------------------------- */
-/* Page Ma Formation */
+/* /////////////////////////////////////////////// */
+/* ////// RESPONSIVENESS //////////////////////// */
+/* ////////////////////////////////////////////// */
+/* ////// MOBILE FIRST APPROACH ///////////////// */
+/* ////////////////////////////////////////////// */
 
-/* -------------------------------------------- */
-/* Page Mes Projets */
+/* 
+  - Mobile First Approach selected
+  - Format mobile : 320px et jusqu'à 767px
+  - Format tablette : 768px et jusqu'à 1024px
+  - Format ordinateur (desktop) : 1025 et +
+*/
+
+/* Format tablette */
+@media screen and (min-width: 768px) {
+  /* Header */
+  /* Section: John Doe - DWWM */
+  /* Section: Ma Formation */
+  /* Section: Mes Competences */
+  /* Section: Mes Projets */
+  #index-page-main #my-projects-section #projects-grid {
+    display: none;
+  }
+
+  #index-page-main #my-projects-section #projects-grid-alt {
+    margin: 40px 8px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  #index-page-main #my-projects-section #projects-grid-alt .project-card {
+    position: relative;
+    margin: 8px;
+    padding: 16px;
+    border: 1px solid var(--lightgrey);
+  }
+  #index-page-main #my-projects-section #projects-grid-alt .project-card span {
+    position: absolute;
+    top: 36px;
+    left: 30px;
+    padding: 8px;
+    background-color: var(--darkblue);
+    color: var(--white);
+  }
+
+  #index-page-main #my-projects-section #projects-grid-alt .project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  #index-page-main #my-projects-section #projects-grid-alt {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  #index-page-main
+    #my-projects-section
+    #projects-grid-alt
+    article
+    .project-card {
+    height: 47vh;
+    overflow: hidden;
+  }
+
+  #index-page-main
+    #my-projects-section
+    #projects-grid-alt
+    article
+    .project-card
+    h1 {
+    margin: 40px 0;
+  }
+
+  #index-page-main
+    #my-projects-section
+    #projects-grid-alt
+    > :nth-last-of-type(1) {
+    grid-column: span 2;
+  }
+
+  /* Footer */
+}
+
+/* Format Desktop */
+@media screen and (min-width: 1024px) {
+  /* Header */
+  /* Section: John Doe - DWWM */
+  /* Section: Ma Formation */
+  /* Section: Mes Competences */
+  /* Section: Mes Projets */
+  #projects-grid-section {
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  #projects-grid-alt {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #projects-grid-alt > :nth-last-of-type(1) {
+    grid-column: span 1;
+  }
+  /* Footer */
+}

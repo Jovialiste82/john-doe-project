@@ -1,0 +1,289 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap");
+
+/* ////// MOBILE FIRST APPROACH ///////////////// */
+/* ///////////////////////////////////// */
+/* Booting Up */
+* {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --darkblue: #011826;
+  --orange: #ff9a16;
+  --bluegreen: #2cc1aa;
+  --red: #e7174a;
+  --lightgrey: #f7fff2;
+  --black: #000000;
+  --white: #ffffff;
+  --opensans: Open Sans;
+  --raleway: Raleway, sans-serif;
+}
+
+body {
+  background-color: var(--darkblue);
+  color: var(--lightgrey);
+  font-family: var(--opensans);
+}
+
+header,
+main,
+footer {
+  padding: 16px;
+}
+
+h1,
+h2 {
+  font-family: var(--raleway);
+  font-weight: 700;
+  font-size: 27px;
+}
+
+/* ///////////////////////////////////// */
+/* Utilities */
+
+.container-1440 {
+  max-width: 1440px;
+}
+
+.container-1140 {
+  max-width: 1140px;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.mb-24px {
+  margin-bottom: 24px;
+}
+
+.mb-80px {
+  margin-bottom: 80px;
+}
+
+.ml-40px {
+  margin-left: 40px;
+}
+
+/* ///////////////////////////////////// */
+/* Reusable Items */
+
+.dark-blue-button {
+  border: 1px solid var(--lightgrey);
+  padding: 16px;
+  display: block;
+  width: fit-content;
+  background-color: var(--darkblue);
+  color: var(--white);
+  text-decoration: none;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: var(--red);
+  }
+}
+
+.open-contact-modal {
+  background-color: var(--orange);
+  color: var(--lightgrey);
+  cursor: pointer;
+  outline: none;
+  padding: 10px;
+  margin: 10px 0;
+  text-decoration: none;
+}
+
+/* ///////////////////////////////////// */
+/* /////// HEADER ////////////////////// */
+/* ///////////////////////////////////// */
+
+#index-page-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#index-page-header .header-nav {
+  display: flex;
+  align-items: center;
+}
+
+#index-page-header .header-nav ul {
+  display: none;
+}
+
+#index-page-header .logo-box {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+#index-page-header .logo-box img {
+  width: 180px;
+}
+#index-page-header .logo-box span {
+  color: var(--lightgrey);
+}
+
+/* ///////////////////////////////////// */
+/* /////// MAIN //////////////////////// */
+/* ///////////////////////////////////// */
+
+/* Section: Red Hero */
+#hero-section-projets {
+  height: 430px;
+  background-color: var(--red);
+  display: grid;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+#hero-section-projets h1 {
+  margin: 24px auto;
+}
+
+/* Section: Grille des projets */
+#projects-grid {
+  margin: 40px 8px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#projects-grid .project-card {
+  position: relative;
+  margin: 8px;
+  padding: 16px;
+  border: 1px solid var(--lightgrey);
+}
+#projects-grid .project-card span {
+  position: absolute;
+  top: 36px;
+  left: 30px;
+  padding: 8px;
+  background-color: var(--darkblue);
+  color: var(--white);
+}
+
+#projects-grid .project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.projects-nav {
+  display: flex;
+  margin: 32px 0;
+  justify-content: center;
+  align-items: center;
+}
+.projects-nav ul {
+  display: flex;
+}
+
+.projects-nav ul li {
+  list-style-type: none;
+  margin: 8px;
+  color: var(--orange);
+}
+
+.projects-nav ul li.active {
+  color: var(--red);
+}
+
+/* ///////////////////////////////////// */
+/* /////// FOOTER ////////////////////// */
+/* ///////////////////////////////////// */
+#index-page-footer {
+  background-color: var(--bluegreen);
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* ///////////////////////////////////// */
+/* ////// RESPONSIVENESS /////////////// */
+/* ///////////////////////////////////// */
+/* ////// MOBILE FIRST APPROACH //////// */
+/* ///////////////////////////////////// */
+
+/* 
+  - Mobile First Approach selected
+  - Format mobile : 320px et jusqu'à 767px
+  - Format tablette : 768px et jusqu'à 1024px
+  - Format ordinateur (desktop) : 1025 et +
+*/
+
+/* ///////////////// */
+/* Format tablette */
+@media screen and (min-width: 768px) {
+  /* Header */
+  /* Section: Red Hero */
+  /* Section: Grille des projets */
+  #projects-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  #projects-grid article .project-card {
+    height: 47vh;
+    overflow: hidden;
+  }
+
+  #projects-grid article .project-card h1 {
+    margin: 40px 0;
+  }
+
+  #projects-grid > :nth-last-of-type(1) {
+    grid-column: span 2;
+  }
+  /* Footer */
+}
+
+/* ///////////////// */
+/* Format Desktop */
+@media screen and (min-width: 1024px) {
+  /* Header */
+  #index-page-header {
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  #index-page-header > .header-nav i {
+    display: none;
+  }
+  #index-page-header > .header-nav ul {
+    display: flex;
+    list-style-type: none;
+  }
+  #index-page-header > .header-nav ul li {
+    list-style: none;
+    margin-left: 24px;
+  }
+  #index-page-header > .header-nav ul li a {
+    color: var(--orange);
+    text-decoration: none;
+    transition: color 0.3s ease-out;
+  }
+
+  #index-page-header > .header-nav ul li a.open-contact-modal {
+    color: var(--lightgrey);
+  }
+
+  #index-page-header > .header-nav ul li a.active,
+  #index-page-header > .header-nav ul li a:hover {
+    color: var(--red);
+  }
+  /* Section: Red Hero */
+  /* Section: Grille des projets */
+  #projects-grid {
+    max-width: 1440px;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #projects-grid > :nth-last-of-type(1) {
+    grid-column: span 1;
+  }
+  /* Footer */
+}

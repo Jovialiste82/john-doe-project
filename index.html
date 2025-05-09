@@ -8,14 +8,13 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="/styles/style.css" />
-    <link rel="stylesheet" href="/styles/responsiveness.css" />
     <link rel="stylesheet" href="/styles/animations.css" />
     <link rel="stylesheet" href="/styles/modals.css" />
     <title>John Doe</title>
   </head>
   <body>
     <header id="index-page-header">
-      <a href="/" class="logo-box">
+      <a href="/index.html" class="logo-box">
         <img src="/img/Logo.png" alt="Logo John Doe" />
         <span>Développeur Web et Web Mobile</span>
       </a>
@@ -23,22 +22,22 @@
         <i class="fa-solid fa-bars"></i>
         <ul>
           <li>
-            <a href="#">Accueil</a>
+            <a href="/index.html" class="active">Accueil</a>
           </li>
           <li>
-            <a href="#">Qui suis-je?</a>
+            <a href="/index.html">Qui suis-je?</a>
           </li>
           <li>
-            <a href="#">Ma formation</a>
+            <a href="/formation.html">Ma formation</a>
           </li>
           <li>
-            <a href="#">Mes compétences</a>
+            <a href="/index.html">Mes compétences</a>
           </li>
           <li>
-            <a href="#">Mes projets</a>
+            <a href="/projets.html">Mes projets</a>
           </li>
           <li>
-            <a href="#">Contactez-moi</a>
+            <a class="open-contact-modal" href="#modal-2">Contactez-moi</a>
           </li>
         </ul>
       </nav>
@@ -87,7 +86,7 @@
             saepe, ipsa earum, corrupti necessitatibus libero ut nobis sed magni
             facere blanditiis assumenda. Enim vero perspiciatis beatae animi!
           </p>
-          <a id="open-contact-modal" href="#modal-1">Contactez-moi</a>
+          <a class="open-contact-modal" href="#modal-1">Contactez-moi</a>
         </article>
         <img src="/img/moi.png" alt="Image d'un developpeur" />
       </section>
@@ -250,7 +249,7 @@
           <h2 class="text-align-center mb-24px">Mes projets</h2>
           <a class="dark-blue-button">Voir tous les projets</a>
         </div>
-        <div class="projects-grid">
+        <div id="projects-grid">
           <article>
             <span>Front-end</span>
             <img src="/img/projet1.PNG" alt="Image du Projet 1" />
@@ -288,6 +287,53 @@
               suscipit nostrum commodi rem, repellendus explicabo eum...
             </p>
             <a class="dark-blue-button">Lire la suite</a>
+          </article>
+        </div>
+        <div id="projects-grid-alt">
+          <article>
+            <div class="project-card">
+              <span>Front-end</span>
+              <img src="/img/projet1.PNG" alt="Image du Projet 1" />
+              <h1>Home Key - Intégration HTML & CSS</h1>
+              <p>Lorem ipsum dolor sit amet consectetur</p>
+              <p>
+                adipisicing elit. Perspiciatis laudantium iure, autem omnis
+                dolorum, expedita officiis facilis soluta maiores nihil nisi
+                repudiandae suscipit nostrum commodi rem, repellendus explicabo
+                eum...
+              </p>
+            </div>
+            <div class="dark-blue-button ml-40px">Lire la suite</div>
+          </article>
+          <article>
+            <div class="project-card">
+              <span>Front-end</span>
+              <img src="/img/projet2.PNG" alt="Image du Projet 2" />
+              <h1>Vividly - Intégration Mobile First</h1>
+              <p>Lorem ipsum dolor sit amet consectetur</p>
+              <p>
+                adipisicing elit. Perspiciatis laudantium iure, autem omnis
+                dolorum, expedita officiis facilis soluta maiores nihil nisi
+                repudiandae suscipit nostrum commodi rem, repellendus explicabo
+                eum...
+              </p>
+            </div>
+            <div class="dark-blue-button ml-40px">Lire la suite</div>
+          </article>
+          <article>
+            <div class="project-card">
+              <span>Front-end</span>
+              <img src="/img/projet3.PNG" alt="Image du Projet 3" />
+              <h1>Portfolio de Développeur Web</h1>
+              <p>Lorem ipsum dolor sit amet consectetur</p>
+              <p>
+                adipisicing elit. Perspiciatis laudantium iure, autem omnis
+                dolorum, expedita officiis facilis soluta maiores nihil nisi
+                repudiandae suscipit nostrum commodi rem, repellendus explicabo
+                eum...
+              </p>
+            </div>
+            <div class="dark-blue-button ml-40px">Lire la suite</div>
           </article>
         </div>
       </section>

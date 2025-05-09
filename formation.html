@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/79c0143221.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/styles/formation.css" />
+    <link rel="stylesheet" href="/styles/animations.css" />
+    <link rel="stylesheet" href="/styles/modals.css" />
+    <title>John Doe | Formation</title>
+  </head>
+  <body>
+    <header id="index-page-header">
+      <a href="/index.html" class="logo-box">
+        <img src="/img/Logo.png" alt="Logo John Doe" />
+        <span>Développeur Web et Web Mobile</span>
+      </a>
+      <nav class="header-nav">
+        <i class="fa-solid fa-bars"></i>
+        <ul>
+          <li>
+            <a href="/index.html">Accueil</a>
+          </li>
+          <li>
+            <a href="/index.html">Qui suis-je?</a>
+          </li>
+          <li>
+            <a href="/formation.html" class="active">Ma formation</a>
+          </li>
+          <li>
+            <a href="/index.html">Mes compétences</a>
+          </li>
+          <li>
+            <a href="/projets.html">Mes projets</a>
+          </li>
+          <li>
+            <a class="open-contact-modal" href="#modal-2">Contactez-moi</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="index-page-main">
+      <!--  Section: Red Hero -->
+      <section id="hero-section-projets">
+        <div class="red-hero">
+          <div class="red-hero-textbox">
+            <h1>Formation à la carte</h1>
+            <p>
+              4 mois de formation de découverte des métiers du développement
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Description de la Formation -->
+      <section id="description-formation-section">
+        <div class="description-box">
+          <h2>Description de la formation</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum
+            totam quas molestias
+          </p>
+          <p>
+            doloribus dolore! Neque nulla blanditiis, suscipit voluptates vero
+            quia qui tempora minima corporis quibusdam dolor eligendi fugit
+            expedita.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam
+            praesentium blanditiis aliquam beatae eius pariatur cupiditate
+            sapiente facere eveniet harum ducimus, vel ab numquam? Perspiciatis
+            tenetur animi temporibus cumque molestias.
+          </p>
+        </div>
+        <img src="/img/dev-a-la-carte.png" alt="Image montrant du code" />
+      </section>
+
+      <!-- Section: Mes compétences -->
+      <section id="my-skills-section">
+        <h2 class="text-align-center mb-24px">Les compétences développées</h2>
+
+        <div class="my-skills-container">
+          <div class="my-skills-group">
+            <details name="myskillsdetails">
+              <summary><p>Langages de programmation</p></summary>
+              <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>PHP</li>
+                <li>Python</li>
+              </ul>
+            </details>
+            <details name="myskillsdetails" class="frameworks">
+              <summary><p>Frameworks et bibliothèques</p></summary>
+              <ul>
+                <li>
+                  Front-end
+                  <ul>
+                    <li>React.js</li>
+                    <li>Angular</li>
+                    <li>Vue.js</li>
+                    <li>Jquery</li>
+                    <li>Bootstrap</li>
+                  </ul>
+                </li>
+                <li>
+                  Back-end
+                  <ul>
+                    <li>Node.js</li>
+                    <li>Express.js</li>
+                  </ul>
+                </li>
+              </ul>
+            </details>
+            <details name="myskillsdetails">
+              <summary><p>Bases de données</p></summary>
+              <ul>
+                <li>MySQL</li>
+                <li>MongoDB</li>
+                <li>SQLite</li>
+              </ul>
+            </details>
+            <details name="myskillsdetails">
+              <summary><p>Outils de développement</p></summary>
+              <ul>
+                <li>Git et Github</li>
+                <li>Babel</li>
+                <li>Visual Studio Code</li>
+              </ul>
+            </details>
+          </div>
+          <div class="my-skills-group">
+            <details name="myskillsdetails">
+              <summary><p>Conception Web</p></summary>
+              <ul>
+                <li>Responsive Web Design</li>
+                <li>Connaissance des principes UX/UI</li>
+                <li>Adobe XD / Figma / Sketch</li>
+              </ul>
+            </details>
+            <details name="myskillsdetails">
+              <summary><p>Services Web</p></summary>
+              <ul>
+                <li>APIs Rest</li>
+                <li>GraphQL</li>
+              </ul>
+            </details>
+            <details name="myskillsdetails">
+              <summary><p>Sécurité</p></summary>
+              <ul>
+                <li>Principes de sécurité web (OWASP)</li>
+                <li>Gestion des sessions et des cookies</li>
+                <li>Authentification et autorisation</li>
+                <li>SSL et TLS</li>
+              </ul>
+            </details>
+            <details name="myskillsdetails">
+              <summary><p>Autres compétences</p></summary>
+              <ul>
+                <li>Testing et débogage</li>
+                <li>Performances et optimisations</li>
+                <li>SEO (Search Engine Optimisation)</li>
+                <li>Accessibilité Web (WCAG)</li>
+                <li>Gestion de projet et collaboration en équipe</li>
+                <li>Veille technologique et apprentissage continu</li>
+              </ul>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Grille des projets -->
+      <section id="projects-grid-section">
+        <h2>Les projets réalisés</h2>
+        <div id="projects-grid">
+          <article>
+            <div class="project-card">
+              <span>Front-end</span>
+              <img src="/img/projet1.PNG" alt="Image du Projet 1" />
+              <h1>Home Key - Intégration HTML & CSS</h1>
+              <p>Lorem ipsum dolor sit amet consectetur</p>
+              <p>
+                adipisicing elit. Perspiciatis laudantium iure, autem omnis
+                dolorum, expedita officiis facilis soluta maiores nihil nisi
+                repudiandae suscipit nostrum commodi rem, repellendus explicabo
+                eum...
+              </p>
+            </div>
+            <div class="dark-blue-button ml-40px">Lire la suite</div>
+          </article>
+          <article>
+            <div class="project-card">
+              <span>Front-end</span>
+              <img src="/img/projet2.PNG" alt="Image du Projet 2" />
+              <h1>Vividly - Intégration Mobile First</h1>
+              <p>Lorem ipsum dolor sit amet consectetur</p>
+              <p>
+                adipisicing elit. Perspiciatis laudantium iure, autem omnis
+                dolorum, expedita officiis facilis soluta maiores nihil nisi
+                repudiandae suscipit nostrum commodi rem, repellendus explicabo
+                eum...
+              </p>
+            </div>
+            <div class="dark-blue-button ml-40px">Lire la suite</div>
+          </article>
+          <article>
+            <div class="project-card">
+              <span>Front-end</span>
+              <img src="/img/projet3.PNG" alt="Image du Projet 3" />
+              <h1>Portfolio de Développeur Web</h1>
+              <p>Lorem ipsum dolor sit amet consectetur</p>
+              <p>
+                adipisicing elit. Perspiciatis laudantium iure, autem omnis
+                dolorum, expedita officiis facilis soluta maiores nihil nisi
+                repudiandae suscipit nostrum commodi rem, repellendus explicabo
+                eum...
+              </p>
+            </div>
+            <div class="dark-blue-button ml-40px">Lire la suite</div>
+          </article>
+        </div>
+        <a href="/projets.html" class="dark-blue-button"
+          >Voir plus de projets</a
+        >
+      </section>
+    </main>
+    <footer id="index-page-footer">Mon super site web!</footer>
+  </body>
+</html>
