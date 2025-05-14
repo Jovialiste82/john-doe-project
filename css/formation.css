@@ -68,6 +68,10 @@ h2 {
   margin-left: 40px;
 }
 
+.text-align-center {
+  text-align: center;
+}
+
 /* ///////////////////////////////////// */
 /* Reusable Items */
 
@@ -110,6 +114,66 @@ h2 {
   align-items: center;
 }
 
+.menu-toggle {
+  all: unset;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--lightgrey);
+  padding: 0;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 24px;
+  right: 16px;
+}
+
+@keyframes translateDialogXin {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes translateDialogXout {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+#dialog-nav-links {
+  height: 100vh;
+  width: 70vw;
+  background-color: var(--lightgrey);
+  color: var(--darkblue);
+  transform: translateX(-100%);
+  animation: translateDialogXin ease-in-out 0.9s forwards;
+}
+
+#dialog-nav-links ul {
+  all: unset;
+}
+#dialog-nav-links li {
+  all: unset;
+  color: var(--darkblue);
+  background: none;
+  margin: 8px;
+  padding: 8px;
+  border: 1px solid var(--darkblue);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#index-page-header .header-nav #dialog-nav-links ul {
+  display: flex;
+  flex-direction: column;
+}
+
 #index-page-header .header-nav ul {
   display: none;
 }
@@ -144,6 +208,67 @@ h2 {
   margin: 24px auto;
 }
 
+/* Section: Description Formation */
+
+#description-formation-section .description-box {
+  margin: 80px auto;
+}
+
+#description-formation-section .description-box h2 {
+  margin: 16px auto;
+}
+
+#description-formation-section .description-box p:nth-child(2) {
+  margin: 16px auto;
+}
+
+#description-formation-section img {
+  width: 100%;
+}
+
+/* Section: Mes Competences */
+#my-skills-section {
+  margin-bottom: 80px;
+  margin-top: 10vh;
+}
+
+#my-skills-section {
+  margin-bottom: 80px;
+  margin-top: 10vh;
+}
+
+#my-skills-section .my-skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#my-skills-section .my-skills-container .my-skills-group details {
+  margin: 16px;
+}
+
+#my-skills-section .my-skills-container .my-skills-group details summary {
+  padding: 16px;
+  background-color: var(--lightgrey);
+  color: var(--orange);
+  list-style: none;
+}
+
+#my-skills-section .my-skills-container .my-skills-group details summary p {
+  padding: 8px;
+  border-bottom: 2px solid var(--red);
+}
+
+#my-skills-section .my-skills-container .my-skills-group details ul {
+  background-color: var(--lightgrey);
+  color: var(--black);
+  padding: 16px 40px;
+}
+#my-skills-section .my-skills-container .my-skills-group details ul li {
+  list-style-type: circle;
+  margin: 8px;
+}
+
 /* Section: Grille des projets */
 #projects-grid {
   margin: 40px 8px;
@@ -172,24 +297,9 @@ h2 {
   object-fit: cover;
 }
 
-.projects-nav {
-  display: flex;
-  margin: 32px 0;
-  justify-content: center;
-  align-items: center;
-}
-.projects-nav ul {
-  display: flex;
-}
-
-.projects-nav ul li {
-  list-style-type: none;
-  margin: 8px;
-  color: var(--orange);
-}
-
-.projects-nav ul li.active {
-  color: var(--red);
+#projects-grid-section > .dark-blue-button {
+  display: block;
+  margin: 28px auto 8px auto;
 }
 
 /* ///////////////////////////////////// */
@@ -198,7 +308,7 @@ h2 {
 #index-page-footer {
   background-color: var(--bluegreen);
   text-align: center;
-  margin-top: 50px;
+  height: 152px;
 }
 
 /* ///////////////////////////////////// */
@@ -214,12 +324,22 @@ h2 {
   - Format ordinateur (desktop) : 1025 et +
 */
 
-/* ///////////////// */
 /* Format tablette */
 @media screen and (min-width: 768px) {
   /* Header */
   /* Section: Red Hero */
-  /* Section: Grille des projets */
+  /* Section: Description Formation */
+  /* Section: Mes Competences */
+  #my-skills-section > .my-skills-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #my-skills-section > .my-skills-container > .my-skills-group {
+    width: 100%;
+  }
+  /* Section: Projets Réalisés */
   #projects-grid {
     grid-template-columns: 1fr 1fr;
     gap: 16px;
@@ -240,13 +360,19 @@ h2 {
   /* Footer */
 }
 
-/* ///////////////// */
+/* ///////////////////////////////////// */
+/* ///////////////////////////////////// */
+/* ///////////////////////////////////// */
 /* Format Desktop */
 @media screen and (min-width: 1024px) {
   /* Header */
   #index-page-header {
     max-width: 1440px;
     margin: auto;
+  }
+
+  .menu-toggle {
+    display: none;
   }
 
   #index-page-header > .header-nav i {
@@ -275,10 +401,30 @@ h2 {
     color: var(--red);
   }
   /* Section: Red Hero */
-  /* Section: Grille des projets */
-  #projects-grid {
+
+  /* Section: Description Formation */
+  #description-formation-section {
+    max-width: 1440px;
+    margin: 80px auto;
+    display: flex;
+  }
+  #description-formation-section .description-box {
+    padding-top: 80px;
+  }
+  /* Section: Mes Competences */
+  #my-skills-section {
+    max-width: 1440px;
+    margin: auto auto 80px auto;
+  }
+
+  /* Section: Projets Réalisés */
+
+  #projects-grid-section {
     max-width: 1440px;
     margin: auto;
+  }
+
+  #projects-grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
 

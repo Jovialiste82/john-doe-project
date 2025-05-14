@@ -140,6 +140,66 @@ h2 {
   align-items: center;
 }
 
+.menu-toggle {
+  all: unset;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--lightgrey);
+  padding: 0;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 24px;
+  right: 16px;
+}
+
+@keyframes translateDialogXin {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes translateDialogXout {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+#dialog-nav-links {
+  height: 100vh;
+  width: 70vw;
+  background-color: var(--lightgrey);
+  color: var(--darkblue);
+  transform: translateX(-100%);
+  animation: translateDialogXin ease-in-out 0.9s forwards;
+}
+
+#dialog-nav-links ul {
+  all: unset;
+}
+#dialog-nav-links li {
+  all: unset;
+  color: var(--darkblue);
+  background: none;
+  margin: 8px;
+  padding: 8px;
+  border: 1px solid var(--darkblue);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#index-page-header .header-nav #dialog-nav-links ul {
+  display: flex;
+  flex-direction: column;
+}
+
 #index-page-header .header-nav ul {
   display: none;
 }
@@ -370,7 +430,39 @@ h2 {
 @media screen and (min-width: 768px) {
   /* Header */
   /* Section: John Doe - DWWM */
+  #index-page-main #dwwm-section img {
+    margin: 50px auto;
+    width: 60%;
+  }
   /* Section: Ma Formation */
+  #index-page-main #my-formation-section .my-formation-container .grouping-1 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #index-page-main
+    #my-formation-section
+    .my-formation-container
+    .grouping-1
+    .text-box {
+    width: 40%;
+    padding: 40px;
+  }
+
+  #index-page-main #my-formation-section .my-formation-container .grouping-2 {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  #index-page-main
+    #my-formation-section
+    .my-formation-container
+    .grouping-2
+    .text-box {
+    width: 40%;
+    padding: 40px;
+  }
+
   /* Section: Mes Competences */
   #index-page-main #my-skills-section > .my-skills-container {
     display: flex;
@@ -453,6 +545,37 @@ h2 {
 /* Format Desktop */
 @media screen and (min-width: 1024px) {
   /* Header */
+  #index-page-header {
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  #index-page-header > .header-nav ul {
+    display: flex;
+    list-style-type: none;
+  }
+  #index-page-header > .header-nav ul li {
+    list-style: none;
+    margin-left: 24px;
+  }
+  #index-page-header > .header-nav ul li a {
+    color: var(--orange);
+    text-decoration: none;
+    transition: color 0.3s ease-out;
+  }
+
+  #index-page-header > .header-nav ul li a.open-contact-modal {
+    color: var(--lightgrey);
+  }
+
+  #index-page-header > .header-nav ul li a.active,
+  #index-page-header > .header-nav ul li a:hover {
+    color: var(--red);
+  }
   /* Section: John Doe - DWWM */
   /* Section: Ma Formation */
   /* Section: Mes Competences */

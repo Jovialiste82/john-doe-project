@@ -7,9 +7,9 @@
       src="https://kit.fontawesome.com/79c0143221.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="/styles/style.css" />
-    <link rel="stylesheet" href="/styles/animations.css" />
-    <link rel="stylesheet" href="/styles/modals.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/animations.css" />
+    <link rel="stylesheet" href="/css/modals.css" />
     <title>John Doe</title>
   </head>
   <body>
@@ -19,7 +19,23 @@
         <span>Développeur Web et Web Mobile</span>
       </a>
       <nav class="header-nav">
-        <i class="fa-solid fa-bars"></i>
+        <button class="menu-toggle">&#9776;</button>
+        <dialog id="dialog-nav-links">
+          <ul>
+            <li>Accueil</li>
+            <li>Qui suis-je?</li>
+            <li>Ma formation</li>
+            <li>Mes compétences</li>
+            <li>Mes projets</li>
+            <li
+              id="modal-1-open-button"
+              class="open-contact-modal"
+              href="#modal-1"
+            >
+              Contactez-moi
+            </li>
+          </ul>
+        </dialog>
         <ul>
           <li>
             <a href="/index.html" class="active">Accueil</a>
@@ -28,16 +44,33 @@
             <a href="/index.html">Qui suis-je?</a>
           </li>
           <li>
-            <a href="/formation.html">Ma formation</a>
+            <a href="/html/formation.html">Ma formation</a>
           </li>
           <li>
             <a href="/index.html">Mes compétences</a>
           </li>
           <li>
-            <a href="/projets.html">Mes projets</a>
+            <a href="/html/projets.html">Mes projets</a>
           </li>
           <li>
-            <a class="open-contact-modal" href="#modal-2">Contactez-moi</a>
+            <span
+              id="modal-2-open-button"
+              class="open-contact-modal"
+              href="#dialog-form2-modal"
+              >Contactez-moi</span
+            >
+            <dialog id="dialog-form2-modal">
+              <form>
+                <h2>Me contacter</h2>
+                <label for="name"></label>
+                <input type="text" name="name" id="form2-input-name" />
+                <label for="email"></label>
+                <input type="email" name="email" id="form2-input-email" />
+                <label for="message"></label>
+                <input type="text" name="message" id="form2-input-message" />
+                <button>Envoyer la demande</button>
+              </form>
+            </dialog>
           </li>
         </ul>
       </nav>
@@ -339,5 +372,6 @@
       </section>
     </main>
     <footer id="index-page-footer">Mon super site web!</footer>
+    <script src="/js/index.js"></script>
   </body>
 </html>
