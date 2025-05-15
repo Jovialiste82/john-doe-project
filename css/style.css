@@ -87,6 +87,10 @@ h2 {
   display: block;
 }
 
+.hidden {
+  display: none;
+}
+
 /* -------------------------------------------- */
 /* Reusable Items */
 
@@ -214,6 +218,65 @@ h2 {
 }
 #index-page-header .logo-box span {
   color: var(--lightgrey);
+}
+
+/* Modal 1 */
+#custom-modal-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9999;
+}
+
+#custom-modal-1 .backdrop {
+  position: absolute;
+  /* inset: 0; */
+  top: 5vh;
+  left: 71vw;
+  height: 60vh;
+  width: 25vw;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#custom-modal-1 .custom-modal-content {
+  position: absolute;
+  top: 5vh;
+  left: 1vw;
+  width: 20vw;
+  background: white;
+  padding: 16px;
+  z-index: 2000;
+}
+
+#custom-modal-1 .custom-modal-content form {
+  color: var(--black);
+}
+
+#custom-modal-1 .custom-modal-content form h2,
+#custom-modal-1 .custom-modal-content form div {
+  margin: 16px auto;
+  width: 100%;
+}
+
+#custom-modal-1 .custom-modal-content input,
+#custom-modal-1 .custom-modal-content label,
+#custom-modal-1 .custom-modal-content textarea,
+#custom-modal-1 .custom-modal-content button {
+  width: 90%;
+  margin: auto;
+}
+
+#custom-modal-1 .modal-close-button {
+  position: absolute;
+  top: 0.5vh;
+  right: 1vw;
+  font-size: 24px;
+  color: var(--orange);
+  cursor: pointer;
+  z-index: 3000;
 }
 
 /* ///////////////////////////////////// */
@@ -403,6 +466,85 @@ h2 {
   display: none;
 }
 
+/* Modal 2 */
+#custom-modal-2 {
+  position: absolute;
+  top: 30vh;
+  left: 30vw;
+  height: 10vh;
+  width: 10vw;
+  z-index: 9999;
+}
+
+#custom-modal-2 .backdrop {
+  position: absolute;
+  /* top: 5vh;
+  left: 71vw; */
+  height: 60vh;
+  width: 25vw;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#custom-modal-2 .custom-modal-content {
+  position: absolute;
+  top: 5vh;
+  left: 1vw;
+  width: 20vw;
+  background: white;
+  padding: 16px;
+  z-index: 2000;
+}
+
+#custom-modal-2 .custom-modal-content form {
+  color: var(--black);
+}
+
+#custom-modal-2 .custom-modal-content label {
+  width: 100%;
+  color: var(--black);
+  background-color: var(--orange);
+  display: block;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+#custom-modal-2 .custom-modal-content form h2,
+#custom-modal-2 .custom-modal-content form div {
+  margin: 16px auto;
+  width: 100%;
+}
+
+#custom-modal-2 .custom-modal-content input,
+#custom-modal-2 .custom-modal-content label,
+#custom-modal-2 .custom-modal-content textarea,
+#custom-modal-2 .custom-modal-content button {
+  width: 90%;
+  margin: 8px auto;
+}
+
+#custom-modal-2 .custom-modal-content input,
+#custom-modal-2 .custom-modal-content textarea {
+  width: 96%;
+}
+
+#custom-modal-2 .modal-close-button {
+  position: absolute;
+  background-color: var(--orange);
+  color: var(--orange);
+  top: -5vh;
+  right: 0;
+  width: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 3000;
+  text-align: center;
+}
+
+#custom-modal-2 .modal-close-button:hover {
+  color: var(--red);
+}
+
 /* ///////////////////////////////////// */
 /* /////// FOOTER ////////////////////// */
 /* ///////////////////////////////////// */
@@ -430,9 +572,18 @@ h2 {
 @media screen and (min-width: 768px) {
   /* Header */
   /* Section: John Doe - DWWM */
+  #index-page-main #dwwm-section {
+    flex-direction: row;
+  }
+
+  #index-page-main #dwwm-section article {
+    padding: 3vw;
+  }
+
   #index-page-main #dwwm-section img {
     margin: 50px auto;
-    width: 60%;
+    /* width: 60%; */
+    object-fit: cover;
   }
   /* Section: Ma Formation */
   #index-page-main #my-formation-section .my-formation-container .grouping-1 {

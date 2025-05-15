@@ -27,13 +27,7 @@
             <li>Ma formation</li>
             <li>Mes compétences</li>
             <li>Mes projets</li>
-            <li
-              id="modal-1-open-button"
-              class="open-contact-modal"
-              href="#modal-1"
-            >
-              Contactez-moi
-            </li>
+            <li>Contactez-moi</li>
           </ul>
         </dialog>
         <ul>
@@ -53,24 +47,9 @@
             <a href="/html/projets.html">Mes projets</a>
           </li>
           <li>
-            <span
-              id="modal-2-open-button"
-              class="open-contact-modal"
-              href="#dialog-form2-modal"
+            <span id="custom-modal-open-button-1" class="open-contact-modal"
               >Contactez-moi</span
             >
-            <dialog id="dialog-form2-modal">
-              <form>
-                <h2>Me contacter</h2>
-                <label for="name"></label>
-                <input type="text" name="name" id="form2-input-name" />
-                <label for="email"></label>
-                <input type="email" name="email" id="form2-input-email" />
-                <label for="message"></label>
-                <input type="text" name="message" id="form2-input-message" />
-                <button>Envoyer la demande</button>
-              </form>
-            </dialog>
           </li>
         </ul>
       </nav>
@@ -79,21 +58,6 @@
       <!-- Section: John Doe - DWWM -->
       <section id="dwwm-section">
         <article class="presentation-box">
-          <!-- Modal -->
-          <div id="modal-1" class="modal">
-            <div class="modal-content">
-              <h3>Me contacter</h3>
-              <label for="aaa">Votre nom:</label>
-              <input type="text" />
-              <label for="bbb">Votre email:</label>
-              <input type="email" />
-              <label for="ccc">Votre message:</label>
-              <textarea name="Message" id="ccc"></textarea>
-              <a href="#" id="close">Envoyer la demande</a>
-            </div>
-          </div>
-          <!-- End of Modal -->
-
           <h1>John Doe - Développeur web et web mobile</h1>
           <p>Lorem ipsum dolor sit amet</p>
           <p>
@@ -119,7 +83,9 @@
             saepe, ipsa earum, corrupti necessitatibus libero ut nobis sed magni
             facere blanditiis assumenda. Enim vero perspiciatis beatae animi!
           </p>
-          <a class="open-contact-modal" href="#modal-1">Contactez-moi</a>
+          <a id="custom-modal-open-button-2" class="open-contact-modal"
+            >Contactez-moi</a
+          >
         </article>
         <img src="/img/moi.png" alt="Image d'un developpeur" />
       </section>
@@ -372,6 +338,72 @@
       </section>
     </main>
     <footer id="index-page-footer">Mon super site web!</footer>
+
+    <!-- --------------------------- Modals ------------------------ -->
+    <!-- Form Modal 1-->
+    <div id="custom-modal-1" class="custom-modal hidden">
+      <div class="backdrop">
+        <span id="custom-modal-close-button-1" class="modal-close-button"
+          >X</span
+        >
+        <div class="custom-modal-content">
+          <!-- form content -->
+          <form>
+            <h2>Me contacter</h2>
+            <div class="form2-name">
+              <label for="name">Votre nom:</label>
+              <input type="text" name="name" id="form2-input-name" />
+            </div>
+            <div class="form2-email">
+              <label for="email">Votre email:</label>
+              <input type="email" name="email" id="form2-input-email" />
+            </div>
+            <div class="form2-message">
+              <label for="message">Votre message:</label>
+
+              <textarea
+                id="message2"
+                name="message2"
+                placeholder="Votre message"
+              >
+              </textarea>
+            </div>
+
+            <button class="dark-blue-button">Envoyer la demande</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Modal 2 -->
+    <div id="custom-modal-2" class="custom-modal hidden">
+      <div class="backdrop"></div>
+      <div class="custom-modal-content">
+        <span id="custom-modal-close-button-2" class="modal-close-button"
+          >X</span
+        >
+        <!-- form content -->
+        <form>
+          <h2>Me contacter</h2>
+          <div class="form2-name">
+            <label for="name">Votre nom:</label>
+            <input type="text" name="name" id="form2-input-name" />
+          </div>
+          <div class="form2-email">
+            <label for="email">Votre email:</label>
+            <input type="email" name="email" id="form2-input-email" />
+          </div>
+          <div class="form2-message">
+            <label for="message">Votre message:</label>
+
+            <textarea id="message2" name="message2" placeholder="Votre message">
+            </textarea>
+          </div>
+
+          <button class="dark-blue-button">Envoyer la demande</button>
+        </form>
+      </div>
+    </div>
     <script src="/js/index.js"></script>
   </body>
 </html>

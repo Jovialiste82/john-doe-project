@@ -2,13 +2,25 @@
 //////// Capturing DOM /////////////
 */
 const dialogNavLinks = document.querySelector("#dialog-nav-links");
-const dialogContactFormOnMobile = document.querySelector("#dialog-form1-modal");
-const dialogContactFormOnDesktop = document.querySelector(
-  "#dialog-form2-modal"
-);
 const menuToggleButton = document.querySelector(".menu-toggle");
-const formDialogButton1 = document.querySelector("#modal-1-open-button");
-const formDialogButton2 = document.querySelector("#modal-2-open-button");
+// Modal number 1
+const customModal1 = document.querySelector("#custom-modal-1");
+const customModalOpenButton1 = document.querySelector(
+  "#custom-modal-open-button-1"
+);
+const customModalCloseButton1 = document.querySelector(
+  "#custom-modal-close-button-1"
+);
+// Modal number 2
+const customModal2 = document.querySelector("#custom-modal-2");
+const customModalOpenButton2 = document.querySelector(
+  "#custom-modal-open-button-2"
+);
+const customModalCloseButton2 = document.querySelector(
+  "#custom-modal-close-button-2"
+);
+
+// Other buttons
 const button1 = document.querySelector("#dialog-nav-links ul li:nth-child(1)");
 const button2 = document.querySelector("#dialog-nav-links ul li:nth-child(2)");
 const button3 = document.querySelector("#dialog-nav-links ul li:nth-child(3)");
@@ -43,6 +55,31 @@ menuToggleButton.addEventListener("click", () => {
   dialogNavLinks.showModal();
 });
 
+// Modal buttons
+customModalOpenButton1.addEventListener("click", () => {
+  console.log("should remove hidden to modal 1...");
+  customModal1.classList.toggle("hidden");
+});
+
+customModalOpenButton2.addEventListener("click", () => {
+  console.log("should remove hidden to modal 2...");
+
+  customModal2.classList.toggle("hidden");
+});
+
+customModalCloseButton1.addEventListener("click", () => {
+  console.log("should add hidden to modal 1...");
+
+  customModal1.classList.toggle("hidden");
+});
+
+customModalCloseButton2.addEventListener("click", () => {
+  console.log("should add hidden to modal 2...");
+
+  customModal2.classList.toggle("hidden");
+});
+
+// Nav Dialog button
 button1.addEventListener("click", () => {
   console.log("Will navigate to the Home page");
   closeNavDialog("/index.html");
